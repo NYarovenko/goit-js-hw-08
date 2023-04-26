@@ -38,8 +38,11 @@ function saveForm(event) {
 
 // відтворення полів форми
 function loadForm() {
+  if (load(KEY) === undefined) return;
+
   const input = document.querySelector('input');
   const textarea = document.querySelector('textarea');
+
   const { email, message } = load(KEY);
 
   input.value = email;
