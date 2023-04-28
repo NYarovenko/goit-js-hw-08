@@ -22,7 +22,7 @@ function handleSubmit(event) {
     return console.log('Please fill in all the fields!');
   }
 
-  console.log(`email: ${email.value}, message: ${message.value}`);
+  console.log({ email: email.value, message: message.value });
   remove(KEY);
   event.currentTarget.reset();
 }
